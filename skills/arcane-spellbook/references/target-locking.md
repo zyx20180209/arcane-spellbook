@@ -1,72 +1,72 @@
-# Target-bound spells and identity locking
+# 目标绑定法术与身份锁定
 
-Use for curses, blessings, remote healing, summons, bindings, oaths, tracking effects, and any spell whose effect must remain attached to a particular in-world entity.
+适用于诅咒、祝福、远程治疗、召唤、束缚、誓约、追踪效果，以及必须持续附着于特定世界内实体的法术。
 
-## Separate four problems
+## 分开四个问题
 
-Do not collapse these into a single idea called "lock":
+不要把以下步骤统称为“锁定”：
 
-1. **Acquisition:** detect candidate entities.
-2. **Identification:** decide which candidate is the intended identity.
-3. **Association:** keep successive observations assigned to the same entity.
-4. **Binding:** attach the magical effect and define when it transfers, persists, or breaks.
+1. **获取：** 发现候选实体。
+2. **识别：** 判断哪个候选者符合预定身份。
+3. **关联：** 将连续观测持续分配给同一实体。
+4. **绑定：** 附着法术效果，并定义转移、持续或断裂条件。
 
-This separation creates useful failure modes: failure to see, mistaken identity, track swap, and incorrect metaphysical binding.
+这一区分会产生有诊断价值的故障：看不见、认错人、关联交换和形而上绑定错误。
 
-## Knowledge index
+## 知识索引
 
-| Problem | Study areas | Spellbook use |
+| 问题 | 学习领域 | 法术书中的用途 |
 |---|---|---|
-| Define identity | logic, equivalence relations, philosophy of identity, ontology | decide what counts as "the same person" |
-| Combine weak signs | Bayesian inference, likelihood ratios, evidence theory | update confidence from several cues |
-| Match a signature | feature vectors, distance metrics, classification, hypothesis testing | compare arcane resonance patterns |
-| Maintain continuity | state-space models, filtering, data association | follow a moving or changing target |
-| Resist impersonation | challenge-response concepts, authentication factors, adversarial reasoning | distinguish disguise from identity |
-| Bind through relations | graph theory, relational logic, type systems | target by oath, lineage, possession, or role |
-| Control false matches | precision/recall, thresholds, cost-sensitive decisions | trade missed casts against misbinding |
-| Protect the binding | checksums, invariants, formal verification concepts | detect corruption or illicit transfer |
+| 定义身份 | 逻辑、等价关系、身份哲学、本体论 | 判断何谓“同一个人” |
+| 合并弱证据 | 贝叶斯推断、似然比、证据理论 | 从多个线索更新置信度 |
+| 匹配特征 | 特征向量、距离度量、分类、假设检验 | 比较法术共鸣模式 |
+| 维持连续性 | 状态空间模型、滤波、数据关联 | 跟随运动或变化中的目标 |
+| 抵抗冒充 | 询问—应答、认证因子、对抗推理 | 区分伪装与身份 |
+| 通过关系绑定 | 图论、关系逻辑、类型系统 | 按誓约、血缘、所有物或职能寻址 |
+| 控制误匹配 | 精确率/召回率、阈值、代价敏感决策 | 权衡漏施与错绑 |
+| 保护绑定 | 校验和、不变量、形式验证概念 | 发现损坏或非法转移 |
 
-Recommended study sequence: sets and predicates; probability and conditional evidence; classification error; sequential updating; graph relations; adversarial cases; formal binding contracts.
+推荐学习顺序：集合与谓词；概率与条件证据；分类误差；序贯更新；图关系；对抗情形；形式绑定契约。
 
-## Magical identity channels
+## 法术身份通道
 
-Choose one or more observable channels and define how magic exposes them:
+选择一个或多个可观测通道，并说明法术如何使其显现：
 
-- current physical pattern;
-- persistent arcane resonance;
-- self-model or conscious response;
-- causal history;
-- relational token such as an oath or freely given link;
-- true-name-like symbolic key;
-- carried object with a declared provenance chain.
+- 当前物理形态；
+- 持久法术共鸣；
+- 自我模型或有意识的回应；
+- 因果历史；
+- 誓约或自愿交付链接等关系令牌；
+- 类似真名的符号钥匙；
+- 带有明确来源链的随身物。
 
-Each channel must have mutation, ambiguity, spoofing, and expiry rules. A name alone should not be an infallible global identifier unless the world's ontology explicitly makes it one.
+每个通道必须具备变化、歧义、伪造和失效规则。除非世界本体论明确规定名字具有全局唯一性，否则名字不能单独充当绝对标识。
 
-## A usable lock algorithm
+## 可执行的锁定算法
 
-Write locking as a staged decision:
+将锁定写成分阶段决策：
 
-1. define the target predicate before raising power;
-2. collect independent observations;
-3. reject observations below quality thresholds;
-4. update candidate scores;
-5. require a confidence margin over the runner-up, not merely a high top score;
-6. issue a low-power probe or magical challenge when ambiguity remains;
-7. bind only after identity and association checks agree;
-8. monitor invariant cues and break the effect on contradiction.
+1. 在提升功率前定义目标谓词；
+2. 收集相互独立的观测；
+3. 排除低于质量阈值的观测；
+4. 更新各候选者的得分；
+5. 要求第一候选与第二候选之间存在足够差值，而不是只看最高分；
+6. 歧义仍然存在时，发出低功率探测或法术询问；
+7. 只有身份检查和连续关联检查一致时才绑定；
+8. 持续监测不变量，一旦出现矛盾便断开效果。
 
-Specify which stages happen offline, during ritual preparation, and during the live cast. Expert performance should include recognizing when evidence cannot justify a lock.
+明确哪些步骤在课前、仪式准备和实时施法中完成。高手必须能判断现有证据何时不足以支持锁定。
 
-## Good sources of difficulty
+## 良好的难度来源
 
-- twins, copies, shapeshifting, resurrection, possession, memory loss, and divided consciousness;
-- stale tokens and borrowed possessions;
-- crowds creating association swaps;
-- a target changing faster than the observation cycle;
-- correlated clues mistakenly counted as independent evidence;
-- a valid identity lock attached to the wrong body or temporal instance;
-- an effect whose definition of identity differs from the caster's intention.
+- 双生者、复制体、变形、复生、附身、失忆和意识分裂；
+- 过期令牌与借来的所有物；
+- 人群中的关联交换；
+- 目标变化快于观测周期；
+- 把相关线索误当成独立证据；
+- 身份锁定正确但绑定到错误身体或时间实例；
+- 法术对身份的定义与施法者意图不同。
 
-## Ethical and safety boundary
+## 伦理与安全边界
 
-Use magical sensory channels and abstract algorithms. Do not provide procedures for locating, deanonymizing, surveilling, or biometrically identifying real people. For beneficial consensual spells, consent can itself be a high-quality challenge-response factor. For hostile spells, focus on metaphysical ambiguity, resource cost, counterspells, and in-world consequences. Keep these restrictions in the authoring layer rather than reader-facing prose.
+使用法术感知通道和抽象算法，不得提供定位、去匿名化、监视或生物识别现实人物的方法。对于有益且基于同意的法术，同意本身可以成为高质量询问—应答因子。对于敌对法术，重点放在形而上歧义、资源成本、反制法术和世界内后果。此限制保留在编写层，不进入读者正文。

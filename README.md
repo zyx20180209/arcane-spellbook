@@ -1,43 +1,47 @@
-# Arcane Spellbook
+# 奥术法术书
 
-一套以数学、物理、控制理论和训练方法构建的世界内法术教材。
+[English](README.en.md) | **简体中文**
 
-本项目把法术视为可以学习、计算、练习和考核的技术。每个法术章节会说明术式构造、学院定律、法力预算、完整模型、临场算法、施法动作、反馈与中止、习题以及掌握标准。正文面向法术学徒和法师书写，不采用小说叙事或设定解说口吻。
+本书收录学院通行术式的理论、标定方法、临场算法与训练标准，供法术学徒、执业法师及教员查阅。
 
-## 当前法术
+法术是一门需要计算、动作与判断共同参与的技术。学生应当知道法力去了哪里，某个近似为何成立，何时可以提交术式，以及在观测不足时如何中止。只会复述咒式而不能解释误差来源者，不视为掌握该术。
 
-| 法术 | 核心模型 | 文件 |
+> 学院开放教材，现世访客亦可阅览。未完成相应安全认证者，请勿在宿舍、实验室或其他承重结构附近自行验证章节结论。
+
+## 现行术式
+
+| 法术 | 主要课题 | 教材 |
 |---|---|---|
-| 火球术 | 受约束热核、法力分配、效果半径与投送 | [fireball.md](spells/fireball/fireball.md) |
-| 法师之手 | 持续接触场、摩擦、压力、力矩与反馈控制 | [mage-hand.md](spells/mage-hand/mage-hand.md) |
-| 冰锥术 | 水料、相变移热、塑形、旋转稳定与弹道损耗 | [ice-spike.md](spells/ice-spike/ice-spike.md) |
+| 火球术 | 受约束热核、法力分配、效果半径与投送 | [火球术](spells/fireball/fireball.md) |
+| 法师之手 | 持续接触场、摩擦、压力、力矩与反馈控制 | [法师之手](spells/mage-hand/mage-hand.md) |
+| 冰锥术 | 水料、相变移热、塑形、旋转稳定与弹道损耗 | [冰锥术](spells/ice-spike/ice-spike.md) |
 
-## 项目约定
+## 学院计量约定
 
 - 法力是所有术式唯一的能量来源，以学院单位 $\mathrm{ae}$ 计。
 - 距离、时间、温度、质量、力和压力等普通量使用 SI 单位。
-- 数学公式使用标准 LaTeX：行内公式写作 `$...$`，独立公式写作 `$$...$$`。
-- 完整法术应包含理论模型、临场算法、身体接口、反馈、中止、训练、习题和可观察的认证标准。
-- 热、冲量、约束、运动和共鸣是法力的转化通道、术式状态或消耗项目，不作为并列能源。
+- 数学公式采用标准 LaTeX：行内公式写作 `$...$`，独立公式写作 `$$...$$`。
+- 热、冲量、约束、运动和共鸣属于法力的转化通道、术式状态或消耗项目，不列为独立能源。
+- 完整术式课程须包含理论模型、临场算法、身体接口、反馈、中止、训练、习题与可观察的认证标准。
 
-## 目录结构
+## 馆藏结构
 
 ```text
 arcane-spellbook/
-├── spells/                         # 法术正文
+├── spells/                         # 现行法术教材
 │   ├── fireball/
 │   ├── ice-spike/
 │   └── mage-hand/
-└── skills/arcane-spellbook/        # 内容生成规范与知识索引
+└── skills/arcane-spellbook/        # 编写规范、学科索引与校验工具
     ├── SKILL.md
     ├── agents/
     ├── references/
     └── scripts/
 ```
 
-## 校验
+## 编务校验
 
-使用仓库自带的 Ruby 脚本检查 UTF-8、LaTeX 分隔符、Markdown 标题、章节编号和禁用术语：
+修订术式后，使用馆藏校验脚本检查 UTF-8、LaTeX 分隔符、Markdown 标题、章节编号与废止术语：
 
 ```bash
 ruby skills/arcane-spellbook/scripts/validate_spell.rb \
@@ -46,23 +50,21 @@ ruby skills/arcane-spellbook/scripts/validate_spell.rb \
   spells/ice-spike/ice-spike.md
 ```
 
-校验脚本不依赖第三方 Ruby gem。
+脚本使用标准 Ruby 环境，不需要第三方 gem。
 
-## 内容生成 Skill
+`skills/arcane-spellbook` 是教员与编务人员使用的成书规范，收录法力架构、术语规则、学科索引、章节体例、训练考核方法和自动校验工具。新术式通过完整审查后，方可列入“现行术式”。
 
-`skills/arcane-spellbook` 保存了本项目的生成规范，包括：
+## 译本编务
 
-- 法力架构与术语规则；
-- 投射、天体下降、目标锁定和低温弹体等知识索引；
-- 法术章节结构与教材行文规范；
-- 训练、习题和认证标准；
-- 法术文件自动校验脚本。
+简体中文卷为当前校订中的正本。英文卷使用独立入口 [README.en.md](README.en.md)；后续英文法术收入 `spells-en/`，英文编写规范收入 `skills/arcane-spellbook-en/`。
 
-## 许可
+各语言卷共享术式模型、符号和认证结论，但正文分别按本语言的教材习惯编写。译本须保持数值、单位、公式、假设、有效范围和中止条件一致，不作逐句机械转写。未完成技术复核的译稿不得标为现行教材。
 
-本仓库采用双许可证：
+## 誊录与传阅
 
-- `spells/` 下的法术正文及 `skills/arcane-spellbook/references/` 下的教材性内容采用 [CC BY-NC-SA 4.0](LICENSE-CONTENT.md)。
-- `skills/arcane-spellbook/scripts/` 下的代码采用 [MIT License](LICENSE-CODE.md)。
+本馆藏采用双重许可：
 
-其他文件默认按其主要性质适用上述许可证；无法判断时，以 CC BY-NC-SA 4.0 为准。
+- `spells/`、后续的 `spells-en/` 及各语言 Skill 的教材性参考内容采用 [CC BY-NC-SA 4.0](LICENSE-CONTENT.md)。
+- `skills/arcane-spellbook/scripts/` 中的校验程序采用 [MIT License](LICENSE-CODE.md)。
+
+其他文件依其主要性质适用上述许可；无法判断时，以 CC BY-NC-SA 4.0 为准。

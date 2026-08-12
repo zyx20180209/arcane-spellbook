@@ -1,67 +1,67 @@
-# Spell-domain knowledge index
+# 法术领域知识索引
 
-Use this index to choose supporting disciplines for spell classes not covered by the three specialized references. Read only the relevant section while drafting.
+对于未被专门参考覆盖的法术，使用本索引选择支撑学科。编写时只读取有关部分。
 
-## Fields, barriers, and wards
+## 场、屏障与结界
 
-Study vector calculus, scalar and vector fields, boundary-value problems, partial differential equations, potential theory, continuum mechanics, finite-element concepts, stability, and feedback control.
+学习向量分析、标量场与向量场、边值问题、偏微分方程、势理论、连续介质力学、有限元思想、稳定性和反馈控制。
 
-Map these to boundary shape, flux through a surface, stress concentration, leakage, resonance modes, adaptive reinforcement, and collapse propagation. Training should include boundary tracing, perturbation localization, and controlled shedding of load.
+将这些知识映射到边界形状、表面通量、应力集中、泄漏、共振模态、自适应加固和坍塌传播。训练应包括边界描绘、扰动定位和受控卸载。
 
-## Remote manipulation and proxy limbs
+## 远程操纵与代理肢体
 
-Study statics, rigid-body dynamics, contact mechanics, friction, pressure, torque, grasp stability, feedback control, and state machines. Use a minimum contact structure for introductory spells: point contact, opposing clamp, or planar pusher. A proxy limb should not become hand-shaped until the task actually requires independent joint posture, touch localization, or in-hand manipulation.
+学习静力学、刚体动力学、接触力学、摩擦、压力、力矩、抓握稳定性、反馈控制和状态机。入门法术采用最少接触结构：点接触、对向夹持或平面推移。只有当任务确实需要独立关节姿态、触觉定位或手内操作时，代理肢体才需要拟人手形。
 
-For multi-joint or human-hand-like variants, read [robotic-hand-reference.md](robotic-hand-reference.md). Add kinematics, inverse kinematics, compliant control, tactile sensing, drive coupling, and latency only in that advanced chapter.
+多关节或拟人手变体另读 [robotic-hand-reference.md](robotic-hand-reference.md)。运动学、逆运动学、柔顺控制、触觉感知、驱动耦合和延迟只应进入进阶章节。
 
-## Transformation and transmutation
+## 变形与转化
 
-Study conservation laws, stoichiometric reasoning, thermodynamics, constrained optimization, tensor concepts, material properties, reaction networks, and dimensional analysis.
+学习守恒定律、化学计量思维、热力学、约束优化、张量概念、材料性质、反应网络和量纲分析。
 
-Define what is conserved, where waste goes, whether structure or composition is changed first, and how intermediate states remain stable. Use invariants as safety checks and optimization as the source of expert efficiency.
+明确哪些量守恒、废物去往何处、结构与成分何者先改变，以及中间状态如何保持稳定。用不变量作安全检查，用优化解释高手的效率。
 
-## Teleportation and spatial folding
+## 传送与空间折叠
 
-Study coordinate transformations, linear algebra, differential geometry, topology, graph routing, collision detection, numerical conditioning, and error propagation.
+学习坐标变换、线性代数、微分几何、拓扑、图路由、碰撞检测、数值条件和误差传播。
 
-Separate destination identification, frame alignment, path or equivalence construction, occupancy checking, transport, and frame closure. Characteristic failures include orientation mismatch, coordinate singularity, topology mismatch, and accumulated endpoint error.
+分开处理目的地识别、坐标架对准、路径或等价关系构造、占位检查、输运与坐标架闭合。典型故障包括朝向错配、坐标奇点、拓扑不匹配和终点误差累积。
 
-## Illusion and sensory manipulation
+## 幻术与感官操纵
 
-Study optics and acoustics, signal processing, sampling, Fourier analysis, perception, psychophysics, information theory, compression, and inverse problems.
+学习光学与声学、信号处理、采样、傅里叶分析、知觉、心理物理学、信息论、压缩和逆问题。
 
-Decide whether the spell modifies signals in the environment, a target's sensory stream, or interpretation inside the mind. Expertise lies in allocating detail where observers sample it, maintaining cross-sensory consistency, and preventing temporal artifacts.
+明确术式修改的是环境中的信号、目标的感官输入，还是心智内部的解释。专业能力体现在把细节分配到观察者真正采样的位置，维持跨感官一致性，并避免时间伪影。
 
-## Divination and prediction
+## 预言与预测
 
-Study probability, statistics, Bayesian inference, time-series analysis, causal inference, information theory, decision theory, chaos, and calibration.
+学习概率、统计、贝叶斯推断、时间序列、因果推断、信息论、决策论、混沌和标定。
 
-Distinguish observation of hidden present state from prediction of future state. Report distributions and confidence, not guaranteed outcomes. Make feedback loops and self-fulfilling predictions explicit parts of the model.
+区分对隐藏现状的观测与对未来状态的预测。报告分布和置信度，不保证单一结果。将反馈回路和自我实现的预测写入模型。
 
-## Healing and biological regulation
+## 治疗与生物调节
 
-Study anatomy and physiology at a high conceptual level, dynamical systems, homeostasis, control theory, reaction-diffusion concepts, networks, optimization, and medical decision theory.
+在概念层面学习解剖学与生理学，并学习动力系统、稳态、控制理论、反应—扩散思想、网络、优化和医疗决策论。
 
-Model healing as guided regulation under uncertainty rather than instant restoration. Separate diagnosis, target state, intervention, monitoring, and stopping rules. Keep real medical diagnosis and treatment instructions out of generated chapters; retain this as an authoring boundary rather than reader-facing prose.
+将治疗建模为不确定条件下的引导调节。分开诊断、目标状态、干预、监测和停止规则。生成章节不得包含现实医疗诊断或治疗指令；此要求只作为编写边界，不写入读者正文。
 
-## Enchantment and persistent artifacts
+## 附魔与持久器物
 
-Study state machines, formal logic, type systems, invariants, control flow, fault tolerance, cryptographic concepts, versioning, and software testing.
+学习状态机、形式逻辑、类型系统、不变量、控制流、容错、密码学概念、版本管理和软件测试。
 
-Treat an enchantment as a persistent program with triggers, state, permissions, resource limits, exceptions, and shutdown behavior. Require tests for ambiguous inputs, conflicting rules, corrupted state, and safe failure.
+将附魔视为带有触发器、状态、权限、资源上限、异常和关停行为的持久程序。必须测试歧义输入、规则冲突、状态损坏和安全失效。
 
-## Summoning and command
+## 召唤与命令
 
-Study graph theory, contract logic, distributed systems, protocol design, game theory, queueing, and identity verification.
+学习图论、契约逻辑、分布式系统、协议设计、博弈论、排队和身份验证。
 
-Separate address, negotiation, transport or manifestation, command protocol, resource exchange, timeout, and termination. Intelligent entities introduce strategic behavior; they cannot be modeled as passive actuators without an explicit binding law.
+分开处理寻址、协商、输运或显现、命令协议、资源交换、超时和终止。智能实体具有策略行为；除非存在明确的绑定定律，否则不能把它建模为被动执行器。
 
-## Time manipulation
+## 时间操纵
 
-Study differential equations, relativity at a conceptual level, causal graphs, topology, synchronization, concurrency, and consistency models.
+学习微分方程、概念层面的相对论、因果图、拓扑、同步、并发和一致性模型。
 
-Define whether the spell changes rate, ordering, memory, or causal connection. Write explicit consistency rules and prevent equations from concealing contradictions behind an undefined temporal-power term.
+明确术式改变的是速率、顺序、记忆还是因果连接。写出显式一致性规则，不要用未定义的“时间力量”项掩盖矛盾。
 
-## Choosing a primary discipline
+## 选择主学科
 
-Choose one dominant control problem and at most two supporting problems for an introductory spell. Additional disciplines belong in advanced variants. A spell that requires every branch of mathematics is not teachable and cannot produce diagnostic drills.
+入门法术只选择一个主要控制问题，最多再加入两个辅助问题。更多学科放入高级变体。需要全部数学分支才能解释的法术无法教学，也无法设计有诊断价值的训练。

@@ -1,84 +1,84 @@
-# Training and assessment
+# 训练与考核
 
-Use for lesson plans, drills, exercise sets, ranks, examinations, and coaching notes.
+编写课程计划、训练科目、习题集、等级、考试或教学笔记时使用本参考。
 
-## Build the skill tree
+## 构建技能树
 
-Decompose a spell into trainable components:
+将法术拆成可以单独训练的组成部分：
 
-- conceptual model;
-- observation and estimation;
-- mental algorithm;
-- embodied input technique;
-- manifestation or power control;
-- feedback correction;
-- judgment, degradation, and abort;
-- post-performance diagnosis.
+- 概念模型；
+- 观测与估计；
+- 心算算法；
+- 身体输入技术；
+- 显现或功率控制；
+- 反馈修正；
+- 判断、降级和中止；
+- 施法后诊断。
 
-Create dependencies between components. Do not allow full-power practice before measurement, low-power control, and abort are certified.
+明确这些能力之间的先后依赖。在测量、低功率控制和中止尚未通过认证前，不得进行全功率训练。
 
-## Training ladder
+## 训练阶梯
 
-1. **Explain:** predict qualitative behavior and identify variables.
-2. **Calculate:** solve clean cases without time pressure.
-3. **Recognize:** select the correct solver from mixed cases.
-4. **Compress:** use prepared tables, approximations, and mental geometry.
-5. **Rehearse unloaded:** execute gaze, breath, gesture, and decision sequence without manifestation.
-6. **Isolate:** train one control channel with the others fixed.
-7. **Integrate:** perform the complete low-power spell.
-8. **Perturb:** add noise, fatigue, moving conditions, and incomplete observations one at a time.
-9. **Dual-task:** maintain another simple responsibility while casting.
-10. **Retain and transfer:** repeat after delay and adapt to a nearby variant.
+1. **解释：** 预测定性行为并辨认变量。
+2. **计算：** 在不限时条件下求解无扰动情形。
+3. **辨认：** 从混合题型中选择正确求解器。
+4. **压缩：** 使用预制表格、近似和心算几何。
+5. **无载排演：** 不显现术式，只执行视线、呼吸、手势与决策顺序。
+6. **孤立训练：** 固定其他通道，只练一个控制通道。
+7. **整合：** 完成低功率全流程施法。
+8. **加入扰动：** 逐项加入噪声、疲劳、运动条件和不完整观测。
+9. **双任务：** 施法同时维持另一项简单职责。
+10. **保持与迁移：** 间隔一段时间后复测，并适应相邻变体。
 
-This mirrors technical sport instruction: stable positions and repeatable timing are established before load, speed, fatigue, or tactical choice.
+这一顺序参照技术运动教学：先建立稳定姿势和可重复时机，再增加负荷、速度、疲劳或战术选择。
 
-## Exercise types
+## 习题类型
 
-| Type | What it tests | Example form |
+| 类型 | 考查内容 | 常见形式 |
 |---|---|---|
-| Concept check | causal understanding | predict the sign of a correction |
-| Derivation | foundation of an algorithm | obtain a prepared approximation |
-| Estimation | order of magnitude and judgment | bound an input from sparse cues |
-| Timed calculation | working fluency | choose and execute a field solver |
-| Model selection | expertise | reject an invalid approximation |
-| Error diagnosis | coaching skill | infer cause from a miss pattern |
-| Unloaded drill | embodied sequence | perform observation-to-abort cycle |
-| Constrained practical | integrated control | meet tolerance at low power |
-| Perturbation practical | robustness | recover from one declared disturbance |
-| Scenario | decision quality | cast, degrade, delay, or abort |
+| 概念检查 | 因果理解 | 判断修正量的正负号 |
+| 推导 | 算法基础 | 推出可预制的近似式 |
+| 估算 | 数量级与判断 | 从稀疏线索限定输入范围 |
+| 限时计算 | 熟练度 | 选择并执行临场求解器 |
+| 模型选择 | 专业判断 | 排除无效近似 |
+| 误差诊断 | 教学能力 | 从偏差规律反推原因 |
+| 无载训练 | 身体流程 | 完成从观测到中止的动作链 |
+| 受限实操 | 综合控制 | 以低功率达到规定容差 |
+| 扰动实操 | 鲁棒性 | 从一个明确扰动中恢复 |
+| 情境题 | 决策质量 | 在施法、降级、等待或中止中选择 |
 
-Use SI units for ordinary quantities and $\mathrm{ae}$ for 法力. Keep numerical exercises within benign academy training effects.
+普通量使用 SI 单位，法力使用 $\mathrm{ae}$。数值题只采用学院认可的低风险训练效果。
 
-## Observable standards
+## 可观察标准
 
-A complete standard specifies:
+完整标准必须规定：
 
-- environment and equipment;
-- initial conditions and allowed preparations;
-- task and success tolerance;
-- number of trials and required consistency;
-- time allowed for observation, computation, and execution;
-- permitted aids;
-- disturbance distribution or sequence;
-- maximum mana or attention budget;
-- mandatory abort conditions and abort latency;
-- verbal or written diagnosis after performance;
-- retention interval and recertification rule.
+- 环境与器材；
+- 初始条件和允许的准备；
+- 任务与成功容差；
+- 试验次数和一致性要求；
+- 观测、计算和执行时间；
+- 允许使用的辅助；
+- 扰动分布或顺序；
+- 最大法力或注意力预算；
+- 强制中止条件和中止延迟；
+- 操作后的口头或书面诊断；
+- 保持间隔与复认证规则。
 
-Assess accuracy, calibration, consistency, efficiency, model selection, correction stability, and safety separately. Averages must not hide catastrophic failures.
+准确度、标定质量、一致性、效率、模型选择、修正稳定性和安全性应分别评分。平均分不得掩盖灾难性失败。
 
-## Rank progression
+## 等级进阶
 
-- **Novice:** performs a power-limited form in canonical conditions using aids.
-- **Apprentice:** selects among a small set of solvers and handles one disturbance.
-- **Practitioner:** operates unaided in the declared normal envelope and diagnoses errors.
-- **Expert:** adapts the model, manages coupled disturbances, and teaches corrections.
-- **Master:** derives new approximations or variants and validates their operating envelope.
+- **初学者：** 借助辅助，在标准条件下完成受功率限制的构型。
+- **学徒：** 能从少量求解器中作出选择，并处理一种扰动。
+- **执业者：** 能在规定的常规范围内独立施法并诊断误差。
+- **专家：** 能调整模型、处理耦合扰动并教授修正方法。
+- **大师：** 能推导新近似或新变体，并验证其工作范围。
 
-Ranks describe decision and control capability, not merely maximum output.
+等级描述的是决策与控制能力，而不只是最大输出。
 
-## Coaching language
+## 教学语言
 
-Give one external cue and one internal cue per important correction. Keep cues short enough to use during performance. Connect each cue to a modeled variable, and avoid stacking several corrections into one attempt.
+每项重要修正只给一个外部动作线索和一个内部体感线索。口令应短到能在训练中使用，并与模型变量明确对应。一次尝试中不要叠加多项修正。
 
-Use review records with: conditions, chosen solver, estimate, predicted cue, result, error classification, next drill. This turns accumulated experience into better priors and calibration rather than mystical instinct.
+复盘记录包括：条件、所选求解器、估计值、预期征兆、结果、误差分类和下一项训练。这样，积累的经验会改善先验判断和标定，而不会被含混地归为神秘直觉。

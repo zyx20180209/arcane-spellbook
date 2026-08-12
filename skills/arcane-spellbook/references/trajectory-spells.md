@@ -1,70 +1,70 @@
-# Trajectory and area-placement spells
+# 弹道与区域落点法术
 
-Use for fireballs, ice projectiles, arcing bolts, indirect bombardment, beam leading, thrown barriers, and effects placed at an unbound point in space.
+适用于火球、冰质弹体、弧线飞弹、间接投送、光束提前量、投掷屏障和在非绑定空间点生成效果的法术。
 
-## Knowledge index
+## 知识索引
 
-| Problem | Study areas | Spellbook use |
+| 问题 | 学习领域 | 法术书中的用途 |
 |---|---|---|
-| Describe motion | vectors, coordinate systems, kinematics, ordinary differential equations | position and velocity state |
-| Estimate range and angle | trigonometry, similar triangles, angular size, parallax | convert perception into distance |
-| Lead a moving target | relative motion, root finding, intercept geometry | solve where and when paths meet |
-| Account for medium | drag models, fluid mechanics, numerical integration | wind, air, water, magical resistance |
-| Shape a curved path | constrained optimization, splines, calculus of variations | route around obstacles or limit curvature |
-| Correct in flight | feedback control, proportional control, model-predictive control | bounded steering without oscillation |
-| Track observations | alpha-beta filters, Kalman-filter concepts, data association | infer motion from noisy sightings |
-| Quantify miss risk | covariance, error ellipses, Monte Carlo concepts, sensitivity analysis | choose radius, power, or abort threshold |
-| Place an area effect | geometry, convolution, optimization, coverage problems | maximize effect while respecting exclusions |
+| 描述运动 | 向量、坐标系、运动学、常微分方程 | 位置与速度状态 |
+| 估计距离和角度 | 三角学、相似三角形、角尺寸、视差 | 将感知转化为距离 |
+| 计算运动目标提前量 | 相对运动、求根、截获几何 | 求解路径相遇的位置与时刻 |
+| 计入介质影响 | 阻力模型、流体力学、数值积分 | 风、空气、水和法术介质阻力 |
+| 构造曲线路径 | 约束优化、样条、变分法 | 绕开障碍或限制曲率 |
+| 飞行中修正 | 反馈控制、比例控制、模型预测控制 | 有界转向并抑制振荡 |
+| 跟踪观测 | 甲乙滤波、卡尔曼滤波思想、数据关联 | 从含噪观测推断运动 |
+| 量化偏离风险 | 协方差、误差椭圆、蒙特卡洛思想、灵敏度分析 | 选择半径、功率或中止阈值 |
+| 放置区域效果 | 几何、卷积、优化、覆盖问题 | 在满足排除区的同时提高覆盖 |
 
-Recommended study sequence: vectors and units; constant-acceleration motion; relative motion; estimation error; drag and numerical approximation; feedback control; probabilistic placement.
+推荐学习顺序：向量与单位；匀加速运动；相对运动；估计误差；阻力与数值近似；反馈控制；概率落点。
 
-## Runtime decomposition
+## 临场问题分解
 
-Separate the casting problem into:
+将施法问题拆成：
 
-1. establish a local frame from stance and gaze;
-2. estimate range and relative motion;
-3. select a projectile profile with known speed and persistence;
-4. select direct, high-arc, guided, or area-placement solver;
-5. compute time-to-effect and aim offset;
-6. apply first-order environmental correction;
-7. commit, observe deviation, and correct or abort.
+1. 以站姿和视线建立局部坐标架；
+2. 估计距离和相对运动；
+3. 选择速度与存续特性已知的投射构型；
+4. 选择直射、高弧、制导或区域落点求解器；
+5. 计算生效时间和瞄准偏移；
+6. 加入一阶环境修正；
+7. 提交术式，观测偏差，并修正或中止。
 
-Do not let the caster solve a general differential equation mentally. Derive it offline, then provide canonical profiles, fitted rules, or a geometric construction.
+不要要求施法者心算一般微分方程。应在课前推导完整解，再制成标准构型、拟合规则或几何作图法。
 
-## Useful field-algorithm patterns
+## 常用临场算法模式
 
-### Canonical-case interpolation
+### 标准情形插值
 
-Memorize solutions at several ranges or elevations. Locate the present case between two entries and interpolate. Teach when interpolation ceases to be reliable.
+记忆若干距离或高差的解。在相邻两项之间定位当前情形并作插值，同时训练学生辨认插值失效的范围。
 
-### Successive prediction
+### 连续预测
 
-Estimate time-to-effect, project observed motion across that interval, update the time using the new distance, and stop after one or two passes. Explain why convergence is fast in the intended regime and why it fails for rapid acceleration.
+先估计生效时间，把观测运动外推到该时刻，再用新距离更新时间。通常只迭代一至两次。说明为何该算法在规定范围内快速收敛，以及目标快速加速时为何失效。
 
-### First-order perturbation
+### 一阶扰动
 
-Solve a no-disturbance baseline, then add small independent corrections for cross-flow, elevation, latency, or decay. Explicitly warn that corrections cease to add linearly when disturbances become large.
+先求无扰动基准解，再分别加入侧向流、高差、延迟或衰减的小修正。扰动变大后，各项不再线性相加，必须明确其失效界限。
 
-### Error-budget allocation
+### 误差预算分配
 
-Break allowed miss distance among range error, timing error, direction error, execution jitter, and disturbance. Spend training time or 法力 on the dominant term rather than improving everything equally.
+把允许偏差分配给距离误差、计时误差、方向误差、动作抖动和环境扰动。训练或法力应优先投入主导项，而不是平均改善全部因素。
 
-## Technique cues
+## 技术线索
 
-- Define whether the eye, leading hand, focus, or constructed projectile is the angular origin.
-- Distinguish aiming direction from release direction when the spell has latency or recoil.
-- Use breath phases as timing gates: observe, solve, construct, commit, follow through.
-- Keep follow-through meaningful: it maintains a guidance channel, samples deviation, or safely closes it.
-- Provide a no-release reset when the solution becomes stale.
+- 明确以眼、引导手、法器还是已构造的投射物作为角度原点。
+- 若术式有延迟或反冲，区分瞄准方向与释放方向。
+- 用呼吸阶段划分观测、求解、构造、提交和随动。
+- 随动动作必须承担维持制导、采样偏差或安全闭合的功能。
+- 当解已经过期时，提供不释放的复位动作。
 
-## Failure taxonomy
+## 故障分类
 
-- **Range bias:** repeated long or short placement; recalibrate perception or speed profile.
-- **Lead error:** correct line but behind/ahead; diagnose timing versus velocity estimate.
-- **Frame error:** consistent lateral or vertical rotation; repair stance/gaze alignment.
-- **Model mismatch:** good arithmetic with wrong profile; choose another solver.
-- **Control oscillation:** alternating overcorrections; lower gain or slow correction rhythm.
-- **Stale solution:** conditions change between estimate and release; shorten commit window.
+- **距离偏差：** 连续过远或过近；重新标定距离感或速度构型。
+- **提前量误差：** 方向正确但落后或超前；区分计时误差与速度估计误差。
+- **坐标架误差：** 稳定地向侧面或竖直方向旋偏；修正站姿和视线对准。
+- **模型不匹配：** 算术正确但构型选择错误；更换求解器。
+- **控制振荡：** 修正量来回过冲；降低增益或放慢修正节奏。
+- **解已过期：** 估计与释放之间条件改变；缩短提交窗口。
 
-Keep analogies to marksmanship, artillery, and guidance at the level of estimation, uncertainty, and feedback. Use academy-calibrated parameters and training exercises rather than real firing data or operational procedures.
+射击、炮术和制导类比只用于估计、不确定性和反馈概念。使用学院标定参数与训练题，不使用现实射表或作业流程。

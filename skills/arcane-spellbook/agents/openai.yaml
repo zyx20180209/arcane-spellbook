@@ -1,4 +1,4 @@
 interface:
-  display_name: "Arcane Spellbook"
-  short_description: "Design rigorous, learnable in-world spells."
-  default_prompt: "Use $arcane-spellbook to create an in-world spell chapter with a mathematical model, training drills, and mastery standards."
+  display_name: "奥术法术书"
+  short_description: "构建严谨、可学习的世界内法术教材。"
+  default_prompt: "使用 $arcane-spellbook 编写包含数学模型、训练科目和掌握标准的世界内法术章节。"

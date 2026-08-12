@@ -1,60 +1,60 @@
-# Celestial and atmospheric-descent spells
+# 天体与大气下降法术
 
-Use for summoned meteors, redirected celestial matter, extreme-altitude drops, orbital constructs, and long-duration descending effects.
+适用于召唤陨星、改向天体物质、极高空投放、轨道构造物和长时下降效应。
 
-## First classify the spell source
+## 先确定术式来源
 
-These are different spells and must not share a model without explanation:
+以下类型必须分别建模：
 
-- **Created locally:** mana assembles matter or a release field aloft; no prior orbit exists.
-- **Translated:** an existing body is moved through space; momentum and transfer cost matter.
-- **Redirected:** a body already in motion receives a small change that accumulates over time.
-- **Projected image/effect:** only the local endpoint resembles a meteor; model it as a field spell.
+- **高空构造：** 法力在高处组装物质或释放场；不存在原有轨道。
+- **空间平移：** 移动既有物体；需要计入动量和转移成本。
+- **轨道改向：** 对已经运动的物体施加较小变化，使误差或偏移随时间累积。
+- **端点投影：** 只有局部终点表现得像陨星；应按场法术建模。
 
-State which one is true. This choice determines casting time, observability, mana accounting, and narrative scale.
+明确所用类型。该选择决定施法时间、可观测性、法力核算和术式规模。
 
-## Knowledge index
+## 知识索引
 
-| Problem | Study areas | Spellbook use |
+| 问题 | 学习领域 | 法术书中的用途 |
 |---|---|---|
-| Motion in gravity | Newtonian gravitation, orbital mechanics, two-body problem | long-range state evolution |
-| Change an orbit | energy and angular momentum, transfer-orbit concepts, perturbation theory | preparation cost and delayed effects |
-| Predict arrival | numerical integration, event detection, uncertainty propagation | time and location windows |
-| Enter an atmosphere | compressible flow concepts, drag, heating, ablation, fragmentation | survival and visible descent |
-| Correct the endpoint | state estimation, feedback control, robust optimization | bounded magical course correction |
-| Understand impact scale | conservation laws, dimensional analysis, scaling laws | internally consistent consequences |
-| Manage many bodies | n-body concepts, chaos, covariance growth | why prediction horizons are limited |
+| 引力中的运动 | 牛顿引力、轨道力学、二体问题 | 长距离状态演化 |
+| 改变轨道 | 能量与角动量、转移轨道思想、摄动理论 | 准备成本与延迟效应 |
+| 预测到达 | 数值积分、事件检测、不确定性传播 | 到达时间窗与位置窗 |
+| 进入大气 | 可压缩流概念、阻力、加热、烧蚀、碎裂 | 存续与可见下降 |
+| 修正终点 | 状态估计、反馈控制、鲁棒优化 | 有限幅度的航迹修正 |
+| 理解作用尺度 | 守恒定律、量纲分析、尺度律 | 保持结果内部一致 |
+| 管理多个物体 | 多体问题、混沌、协方差增长 | 解释预测时域为何有限 |
 
-Recommended study sequence: vectors and conservation laws; central-force motion; orbital elements as a state representation; perturbations; numerical propagation; atmospheric entry; uncertainty growth and decision thresholds.
+推荐学习顺序：向量与守恒；中心力运动；以轨道要素表示状态；摄动；数值外推；大气进入；不确定性增长与决策阈值。
 
-## Time-scale architecture
+## 时间尺度架构
 
-Celestial spells should reward preparation. Divide computation into:
+天体法术应当奖励准备。将计算分为：
 
-- **ephemeris phase:** establish the body's state and uncertainties well before casting;
-- **window selection:** find intervals in which cost, visibility, and endpoint tolerance are acceptable;
-- **commit phase:** apply the major magical change;
-- **coast phase:** predict and monitor rather than continuously force;
-- **terminal phase:** apply only corrections that remain physically and magically plausible;
-- **exclusion phase:** abort, divert, fragment, or dissipate before the last reversible point.
+- **星历阶段：** 在施法前较早时刻确定物体状态及其不确定性；
+- **窗口选择：** 找到成本、可见性和终点容差均可接受的时间段；
+- **提交阶段：** 施加主要法术变化；
+- **滑行阶段：** 以预测和监视为主，而不是持续强制运动；
+- **末端阶段：** 只施加在物理与法术上仍然合理的修正；
+- **排除阶段：** 在最后可逆点前中止、导离、碎解或消散。
 
-The intellectual challenge is chiefly prediction under growing uncertainty, not fast arithmetic at the final second.
+这类法术的智力难点主要是处理不断增长的不确定性，而不是在最后一秒快速心算。
 
-## Field representations
+## 临场表示
 
-- Use orbital elements or another compact state description as a learned coordinate system.
-- Precompute families of canonical transfers or descents and interpolate between them.
-- Represent endpoint uncertainty as a corridor or footprint, not a single point.
-- Declare a last-correction time after which increased input cannot safely recover the solution.
-- Treat atmosphere and arcane weather as observations that update the prediction during descent.
+- 使用轨道要素或其他紧凑状态描述作为学过的坐标系。
+- 预先计算标准转移或下降族，再作插值。
+- 将终点不确定性表示为走廊或足迹范围，而不是单点。
+- 规定最后修正时刻；超过该点后，增加法力也不能安全恢复解。
+- 将大气和法术天气作为下降期间不断更新预测的观测量。
 
-## Characteristic failures
+## 典型故障
 
-- wrong object or wrong state epoch;
-- accumulated timing error producing a large endpoint shift;
-- atmospheric model mismatch;
-- fragmentation invalidating the single-body model;
-- correction authority exhausted before terminal phase;
-- successful endpoint calculation with unacceptable surrounding consequences.
+- 选错物体或状态历元；
+- 累计计时误差导致巨大终点偏移；
+- 大气模型不匹配；
+- 碎裂使单体模型失效；
+- 在末端阶段前耗尽修正能力；
+- 终点计算正确，但周边后果不可接受。
 
-Keep operational missile design, real targeting, and impact-planning instructions out of generated chapters. Express this restriction only as an authoring boundary, not as a disclaimer to academy readers.
+不得在生成章节中提供现实导弹设计、现实目标选取或撞击规划说明。此限制只保留在编写规则中，不作为学院正文中的免责声明。

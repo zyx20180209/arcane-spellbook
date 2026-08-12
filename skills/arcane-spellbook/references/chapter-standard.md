@@ -1,82 +1,82 @@
-# Practical spell chapter standard
+# 实用法术章节标准
 
-Use this structure for a complete spell. Merge sections only for a deliberately short entry.
+完整法术使用以下结构。只有在有意编写短条目时才合并章节。
 
-Use one continuous major-section sequence. When revising, replace the old section instead of appending a second version; do not duplicate training phases, exercises, answer keys, or interface definitions under new numbers.
+大章节编号必须连续。修订时替换旧章节，不要把新版追加到文件末尾；训练阶段、习题、答案和接口定义不得以新编号重复出现。
 
-## 1. Operational definition
+## 1. 操作定义
 
-State the observable effect, allowed variants, exclusions, typical use conditions, and the exact event that counts as completion. Distinguish the popular name from the technical definition.
+说明可观察效果、允许的变体、适用边界、典型使用条件，以及标志术式完成的确切事件。区分通俗名称与技术定义。
 
-## 2. Entry requirements
+## 2. 入门要求
 
-List conceptual prerequisites, prerequisite spells, perception skills, physical tolerances, safety certifications, and equipment. For each prerequisite, say why it is needed.
+列出概念先修、先修法术、感知技能、身体耐受、安全认证和器材。说明每项要求的用途。
 
-## 3. Arcane laws and assumptions
+## 3. 学院定律与假设
 
-Define academy laws, conserved quantities, units, environmental coefficients, and what magic adds to or overrides in ordinary physics. State that 法力 is the sole energy source; name heat, force, motion, resonance, and field integrity only as transformation channels, states, or costs. Classify the spell's energy architecture as discrete, sustained, or hybrid. For sustained spells, specify startup cost, continuous power terms, planned duration, peak power, and the 法力 reserved for safe abort. Include a dimensional or consistency check. Keep this section positive and in-world: state the academy law directly.
+定义学院定律、守恒量、单位、环境系数，以及法术对普通物理增补或改变的部分。明确法力是唯一能源；热、力、运动、共鸣和场完整性只能作为转化通道、状态或成本。将法力架构归为离散、持续或混合。持续术式必须写明启动成本、持续功率项、计划时长、峰值功率和为安全中止预留的法力。加入量纲或一致性检查。保持正向的世界内口吻，直接陈述学院定律。
 
-## 4. State and control model
+## 4. 状态与控制模型
 
-Provide a table of state, observation, control, disturbance, constraint, and objective variables. Then give the smallest set of equations or rules that predicts behavior well enough to train the spell.
+以表格列出状态、观测、控制、扰动、约束和目标变量。随后给出足以预测和训练该术的最小方程组或规则集。
 
-Include a symbol and unit table before the first exercise. Every symbol used in an exercise or answer must appear in that table or be defined immediately before use.
+在第一道习题之前提供符号与单位表。习题和答案中的每个符号都必须出现在表中，或在使用前立即定义。
 
-## 5. Full solution
+## 5. 完整解法
 
-Derive or explain the exact or high-fidelity method learned in study. Show why the method works, what assumptions it uses, and how it generates prepared tables, canonical cases, or mental shortcuts.
+推导或解释课前学习使用的完整方法。说明其成立原因、使用的假设，以及如何据此制作预制表格、标准情形或心算捷径。
 
-Add one complete worked example between the theory and the exercise set. Show the input, substitution, units, result, and casting decision; do not present an answer key as the first worked calculation.
+在理论与习题之间加入一道完整演算例，列出输入、代入、单位、结果和施法决策。答案部分不能充当全章第一道演算示范。
 
-## 6. Field algorithm
+## 6. 临场算法
 
-Write a numbered algorithm that a trained caster can execute. Include input acquisition, model selection, arithmetic or geometric steps, decision thresholds, time budget, commit point, and fallback. State expected accuracy and validity range.
+编写训练有素的施法者可以执行的编号算法。包括输入获取、模型选择、算术或几何步骤、决策阈值、时间预算、提交点和备用方法。说明预期精度及有效范围。
 
-## 7. Casting technique
+## 7. 施法技术
 
-Describe stance, gaze, breathing, gesture, phrasing, timing, sensation, and follow-through as functional parts of the control interface. Give external coaching cues and internal sensory cues. Include setup, execution, recovery, and reset.
+将站姿、视线、呼吸、手势、短句、时机、体感和随动动作写成控制接口的功能部分。提供外部教学口令和内部感知线索，并涵盖准备、执行、恢复和复位。
 
-## 8. Feedback and correction
+## 8. 反馈与修正
 
-List predicted cues, observed deviations, diagnosis, bounded correction, and the point at which correction must become abort. Distinguish slow drift, sudden disturbance, and unstable oscillation.
+列出预期征兆、观测偏差、诊断、有界修正，以及必须从修正转入中止的界限。区分缓慢漂移、突发扰动和不稳定振荡。
 
-## 9. Safety and abort
+## 9. 安全与中止
 
-Define the safe training environment, academy exclusion zone, mana-limited beginner form, abort cue, residual mana disposal, miscast response, and conditions under which casting is prohibited.
+定义安全训练环境、学院隔离区、受法力限制的初学者构型、中止信号、残余法力处理、误施响应和禁止施法条件。
 
-## 10. Training progression
+## 10. 训练进阶
 
-Progress from isolated perception and calculation to unloaded technique, controlled manifestation, static tasks, dynamic tasks, disturbances, dual tasks, and realistic scenarios. Avoid making every drill a complete cast.
+依次训练孤立感知与计算、无载动作、受控显现、静态任务、动态任务、扰动、双任务和拟真情境。训练不应每次都要求完成一次完整施法。
 
-## 11. Exercises
+## 11. 习题
 
-Include conceptual derivation, numerical or symbolic practice with academy-calibrated quantities, model-selection cases, error diagnosis, and practical drills. Supply solutions or evaluation rubrics separately when appropriate.
+包括概念推导、使用学院标定量的数值或符号练习、模型选择、误差诊断和实操训练。必要时将答案或评价量规单独列出。
 
-## 12. Mastery standard
+## 12. 掌握标准
 
-Specify conditions, repeated trial count, tolerance, time limit, disturbance level, abort performance, diagnosis requirement, and retention or recertification. Do not use vague verbs such as "understands" without observable evidence.
+规定环境条件、重复次数、容差、时间限制、扰动水平、中止表现、诊断要求和保持或复认证周期。不得只用“理解”等无法观察的动词。
 
-## 13. Failure atlas
+## 13. 故障图谱
 
-For each major failure, list visible/sensed symptom, likely causes, discriminating test, immediate response, and corrective drill. Include model error, observation error, calculation error, execution error, and environmental mismatch.
+每类主要故障均列出可见或可感征兆、可能原因、鉴别测试、立即响应和纠正训练。至少包括模型错误、观测错误、计算错误、动作错误和环境不匹配。
 
-## 14. Variants and transfer
+## 14. 变体与迁移
 
-Show which variables change in faster, larger, guided, safer, or specialized variants. Identify which skills transfer and which require a new model. Advanced power must introduce a new control problem, not only larger numbers.
+说明更快、更大、受制导、更安全或专门化变体会改变哪些变量；区分可迁移技能与需要新模型的技能。高级变体必须引入新的控制问题，而不只是放大数值。
 
-## Quality review
+## 质量审查
 
-- Can a student tell what to do next at every step?
-- Can an instructor observe and diagnose performance?
-- Is runtime calculation plausible within the time budget?
-- Does every equation affect practice?
-- Are ordinary quantities expressed in SI units, with 法力 measured in the defined academy unit $\mathrm{ae}$?
-- Are every variable, unit, subscript, and formula written in renderable LaTeX rather than code formatting? Do not use Unicode superscripts, subscripts, or raw Greek letters when LaTeX is available.
-- Are headings standard Markdown (`#`, `##`, `###`) with no generated forms such as `#{1,6}`?
-- Are numbered major sections unique, increasing, and continuous, with no old revision block left later in the file?
-- Does a global search find no obsolete energy names or reader-facing meta terms such as “弧能”, “法能”, “架空”, “虚构”, or “不对应现实”?
-- Are exact theory, prepared aids, and field approximation distinct?
-- Are uncertainty and abort behavior explicit?
-- Does expertise reduce error through better judgment, not unexplained intuition?
-- Does the prose explain the practical reason before issuing an instruction, with a calm instructor's voice rather than generic technical or novelistic language?
-- Does the chapter maintain an in-world academy voice while avoiding real-world hazardous instruction?
+- 学生在每一步能否判断下一步做什么？
+- 教员能否观察并诊断表现？
+- 临场计算能否在时间预算内完成？
+- 每个方程是否都会影响实操？
+- 普通量是否使用 SI 单位，法力是否使用学院单位 $\mathrm{ae}$？
+- 所有变量、单位、下标和公式是否使用可渲染的 LaTeX，而不是代码格式？
+- 标题是否为标准 Markdown（`#`、`##`、`###`），且未出现 `#{1,6}` 一类生成形式？
+- 大章节编号是否唯一、递增、连续，文件末尾是否残留旧修订块？
+- 全文是否不含废止能源名或面向读者的元叙述，如“弧能”“法能”“架空”“虚构”“不对应现实”？
+- 完整理论、预制辅助和临场近似是否明确分开？
+- 是否明确处理不确定性与中止行为？
+- 专业能力是否来自判断改善，而非无法解释的直觉？
+- 行文是否先解释实用原因，再下达指令，并保持冷静的教员口吻？
+- 章节是否维持学院内部教材视角，同时避开现实危险操作说明？

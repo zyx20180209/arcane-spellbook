@@ -1,58 +1,58 @@
-# Foundations of spell engineering
+# 法术工程基础
 
-Read this reference for every spell.
+处理任何法术时都应阅读本参考。
 
-## The core model
+## 核心模型
 
-Represent a spell as a partially observed dynamical system:
+将法术表示为部分可观测的动力系统：
 
-`state -> observation -> estimate -> decision -> control -> new state`
+`状态 -> 观测 -> 估计 -> 决策 -> 控制 -> 新状态`
 
-Define six sets before writing equations:
+编写方程前，先定义六类量：
 
-| Set | Question | Typical examples |
+| 类别 | 问题 | 常见示例 |
 |---|---|---|
-| State | What changes even when not directly visible? | position, velocity, field strength, heat, binding integrity |
-| Observation | What can the caster actually sense? | apparent angle, resonance, boundary shimmer, timing pulse |
-| Control | What can the caster deliberately alter? | direction, power, phase, curvature, release threshold |
-| Disturbance | What is not controlled? | wind, target motion, ambient 法力场 variation, fatigue, interference |
-| Constraint | What must never be exceeded? | attention, 法力, temperature, instability, legal boundary |
-| Objective | What counts as success? | intercept, containment, identification, duration, precision |
+| 状态 | 哪些量会变化，即使不能直接看见？ | 位置、速度、场强、温度、绑定完整性 |
+| 观测 | 施法者实际能感知什么？ | 视角、共鸣、边界微光、计时脉冲 |
+| 控制 | 施法者能主动改变什么？ | 方向、功率、相位、曲率、释放阈值 |
+| 扰动 | 哪些量不受施法者控制？ | 风、目标运动、环境法力场变化、疲劳、干扰 |
+| 约束 | 哪些上限绝不能突破？ | 注意力、法力、温度、失稳界限、法定边界 |
+| 目标 | 什么结果算作成功？ | 拦截、约束、识别、持续时间、精度 |
 
-An equation belongs in a chapter only if it changes an observation, decision, control, constraint, or assessment.
+只有当一个方程会改变观测、决策、控制、约束或考核时，才把它写入章节。
 
-## Five phases of expertise
+## 专业能力的五个阶段
 
-### Offline study
+### 课前学习
 
-Derive the full model, prove or simulate its behavior, learn why an approximation works, prepare tables or mnemonics, and study known failure regions. This is where advanced mathematics demonstrates intellectual depth without forcing implausible spoken algebra during combat.
+推导完整模型，证明或模拟其行为，理解近似成立的原因，制作表格或助记规则，并学习已知的失效区域。高等数学应主要在这一阶段体现智力要求，而不是迫使施法者在战斗中口述复杂代数。
 
-### Pre-cast calibration
+### 施法前标定
 
-Measure personal and environmental coefficients: output-to-effort ratio, perceptual bias, response delay, local 法力场 gradient, medium density, and tool alignment. Calibration converts a general formula into this caster's usable model.
+测定个人和环境系数，包括输出与用力比、感知偏差、响应延迟、局部法力场梯度、介质密度和工具对准误差。标定把通用公式变成当前施法者可用的模型。
 
-### Runtime estimation
+### 临场估计
 
-Observe only the minimum sufficient inputs, classify the situation, choose a prelearned solver, calculate a coarse solution, and reserve attention for uncertainty. Specify a time budget and a fallback method.
+只观测足够完成任务的最少输入，判断情形，选择预先学过的求解器，求出粗略结果，并为不确定性保留注意力。必须规定时间预算和备用方法。
 
-### Feedback correction
+### 反馈修正
 
-Compare predicted cues with observed cues. Apply bounded corrections rather than recomputing everything. Define the cue for under-correction, over-correction, oscillation, and imminent loss of control.
+比较预期征兆与实际征兆。使用有界修正，不要每次重新计算全部模型。分别定义修正不足、修正过量、往复振荡和即将失控的征兆。
 
-### Post-cast review
+### 施法后复盘
 
-Record inputs, prediction, outcome, and residual. Attribute error among observation, model choice, arithmetic, execution, disturbance, and equipment. Training should improve the correct component.
+记录输入、预测、结果和残差。将误差归入观测、模型选择、算术、动作执行、环境扰动或器材。后续训练应针对真正出错的环节。
 
-## The caster's calculation stack
+## 施法者的四级求解体系
 
-Use four levels of solution:
+使用四个层级的解法：
 
-1. **Exact model:** defines the ideal and supports derivation or simulation.
-2. **Prepared representation:** tables, fitted coefficients, diagrams, nomograms, or memorized canonical cases.
-3. **Field algorithm:** a few arithmetic or geometric operations executable under time pressure.
-4. **Reflex rule:** a trained cue-action mapping for emergencies, explicitly less accurate and more conservative.
+1. **完整模型：** 定义理想结果，供推导或模拟使用。
+2. **预制表示：** 表格、拟合系数、图解、列线图或记忆中的标准情形。
+3. **临场算法：** 能在限时条件下完成的少量算术或几何操作。
+4. **反射规则：** 为紧急情形训练的“征兆—动作”映射，精度较低且更保守。
 
-State the error introduced at every reduction. A talented caster is distinguished by selecting the cheapest level that still meets the tolerance.
+每次简化都要说明引入的误差。优秀施法者会选择满足容差的最低成本层级。
 
 ## 法力架构
 
@@ -71,39 +71,39 @@ State the error introduced at every reduction. A talented caster is distinguishe
 - 不创造“弧能”“元素能”“灵魂能”等第二能源，也不为距离、时间、温度、质量或学派另造单位。
 - 读者正文直接使用学院定律和标定参数，不出现“架空”“虚构”“不对应现实”等出戏说明。
 
-## Embodied interface
+## 身体接口
 
-Map cognition to stable physical technique, as in sport instruction:
+参照运动技术教学，将认知步骤映射为稳定的身体动作：
 
-- stance establishes the reference frame and prevents uncontrolled recoil or drift;
-- gaze and head position define observation geometry;
-- hand shape selects parameters or separates simultaneous control channels;
-- motion amplitude encodes magnitude and motion direction encodes sign or axis;
-- breath supplies timing, rhythm, and an abort gate;
-- spoken phrases chunk algorithm stages and provide checksum-like error detection;
-- tools externalize memory, measurement, or computation.
+- 站姿建立参考坐标，并抑制失控的反冲或漂移；
+- 视线与头部位置定义观测几何；
+- 手型选择参数，或分隔同时存在的控制通道；
+- 动作幅度编码大小，动作方向编码正负号或坐标轴；
+- 呼吸提供计时、节奏和中止门；
+- 短句将算法分块，并提供类似校验和的查错作用；
+- 工具用于外置记忆、测量或计算。
 
-For every action, state its function. Avoid ceremonial movements with no modeled effect unless they are explicitly mnemonic or cultural variants.
+每个动作都要说明功能。没有模型作用的仪式动作应被删除；若它承担助记或文化变体功能，则必须明确标注。
 
-## Uncertainty and intellectual skill
+## 不确定性与智力要求
 
-Treat measurements as estimates, not facts. At minimum specify:
+将测量结果视为估计值，而不是事实。至少说明：
 
-- precision or plausible interval;
-- systematic bias versus random noise;
-- how errors propagate into the result;
-- which observation dominates uncertainty;
-- the threshold at which casting should be delayed, degraded, or aborted.
+- 精度或可信区间；
+- 系统偏差与随机噪声；
+- 误差如何传播到结果；
+- 哪项观测主导不确定性；
+- 何时应推迟、降级或中止施法。
 
-Useful knowledge: dimensional analysis, significant figures, sensitivity analysis, probability distributions, Bayesian updating, interval arithmetic, robust optimization, decision theory, and signal detection theory.
+可用知识包括：量纲分析、有效数字、灵敏度分析、概率分布、贝叶斯更新、区间算术、鲁棒优化、决策论和信号检测论。
 
-## Model selection checklist
+## 模型选择检查表
 
-- Can the caster observe every required input?
-- Can the caster influence every named control variable?
-- Is the runtime method feasible within the stated time?
-- Does the approximation have a declared validity range?
-- Does environmental variation produce meaningful technique changes?
-- Can a trainer diagnose distinct failure causes from visible or sensed evidence?
-- Does a novice have a safer, simpler version?
-- Is there a clean abort action and a defined post-abort state?
+- 施法者能否观测全部必要输入？
+- 施法者能否影响全部控制变量？
+- 临场算法能否在规定时间内完成？
+- 近似是否有明确的有效范围？
+- 环境变化是否会引起有意义的技术调整？
+- 教员能否从可见或可感的征兆区分不同故障？
+- 初学者是否有更安全、更简单的版本？
+- 是否存在明确的中止动作和确定的中止后状态？

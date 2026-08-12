@@ -1,56 +1,56 @@
 ---
 name: arcane-spellbook
-description: Design and write rigorous in-world spellbook material in which spells are learnable technical skills. Use when creating or revising a spell, spell model, casting procedure, prerequisite curriculum, drill, exercise, failure analysis, or mastery standard, especially when mathematics, physics, algorithms, perception, embodied technique, and time-limited mental calculation must make the spell feel executable.
+description: 编写和修订严谨的世界内法术教材，将法术处理为可学习、可训练、可考核的技术。用于创建或修改法术、术式模型、施法流程、先修课程、训练科目、习题、故障分析与掌握标准，尤其适合需要用数学、物理、算法、感知、身体技术和限时心算使法术具备可操作感的任务。
 ---
 
-# Arcane Spellbook
+# 奥术法术书
 
-Treat a spell as an embodied real-time control skill, not a formula with fantasy vocabulary. Make theory determine what the caster observes, computes, does, and corrects.
+将法术视为需要身体参与的实时控制技术。理论必须决定施法者观察什么、计算什么、执行什么以及如何修正。
 
-## Required workflow
+## 必须执行的流程
 
-1. Read [foundations.md](references/foundations.md) for every spell task; its terminology and mana architecture are binding.
-2. Classify the spell by its dominant control problem. Read the matching references:
-   - Free projectile, indirect fire, beam lead, or area placement: [trajectory-spells.md](references/trajectory-spells.md)
-   - Ice, frost, phase-change projectiles, atmospheric water collection, or cryogenic material variants: [cryogenic-projectiles.md](references/cryogenic-projectiles.md)
-   - Meteor, orbital, extreme-range, or atmospheric-descent effects: [celestial-descent.md](references/celestial-descent.md)
-   - Curse, blessing, remote healing, summons, or any target-bound effect: [target-locking.md](references/target-locking.md)
-   - Field, barrier, transformation, teleportation, illusion, divination, healing, or enchantment: [domain-index.md](references/domain-index.md)
-   - Multi-joint proxy limbs, dexterous manipulation, remote touch, or human-hand simulation: [robotic-hand-reference.md](references/robotic-hand-reference.md)
-3. Read [chapter-standard.md](references/chapter-standard.md) before drafting a complete spell chapter.
-4. Read [training-and-assessment.md](references/training-and-assessment.md) when writing lessons, drills, exercises, or mastery criteria.
-5. Read [style-guide.md](references/style-guide.md) before drafting or revising reader-facing prose.
-6. State academy laws and assumptions before choosing equations. Never import a real model without defining how magic changes it.
-7. Separate exact theory from the approximation a caster can actually perform under time pressure.
-8. Trace every model variable to an observation, a control action, or a pre-cast setting. Remove decorative variables.
-9. Test the model against at least one ordinary cast, one disturbed cast, and one abort scenario.
-10. Before delivery, run `ruby scripts/validate_spell.rb <spell.md>` on every complete or revised spell chapter. Fix every reported error, then perform the semantic consistency pass: verify that every symbol is defined, every energy term is identified as 法力, and every ordinary unit is SI.
+1. 处理任何法术任务前，阅读 [foundations.md](references/foundations.md)。其中的术语和法力架构具有约束力。
+2. 按主要控制问题分类，并阅读相应参考：
+   - 自由投射物、间接投送、光束提前量或区域落点：[trajectory-spells.md](references/trajectory-spells.md)
+   - 冰霜、相变弹体、空气取水或低温材料变体：[cryogenic-projectiles.md](references/cryogenic-projectiles.md)
+   - 陨星、轨道、超远程或大气下降效应：[celestial-descent.md](references/celestial-descent.md)
+   - 诅咒、祝福、远程治疗、召唤或其他目标绑定效应：[target-locking.md](references/target-locking.md)
+   - 场、屏障、变形、传送、幻术、预言、治疗或附魔：[domain-index.md](references/domain-index.md)
+   - 多关节代理肢体、灵巧操作、远程触觉或人手模拟：[robotic-hand-reference.md](references/robotic-hand-reference.md)
+3. 编写完整法术章节前，阅读 [chapter-standard.md](references/chapter-standard.md)。
+4. 编写课程、训练、习题或掌握标准时，阅读 [training-and-assessment.md](references/training-and-assessment.md)。
+5. 编写或修订读者正文前，阅读 [style-guide.md](references/style-guide.md)。
+6. 先陈述学院定律和假设，再选择方程。引入现实模型时，明确法术对该模型作出的增补或改变。
+7. 分开完整理论与施法者在限时条件下实际使用的近似算法。
+8. 将每个变量追溯到观测量、控制动作或施法前设定；删除只作装饰的变量。
+9. 至少用一次常规施法、一次受扰施法和一次中止情形检验模型。
+10. 交付完整或修订后的章节前，运行 `ruby scripts/validate_spell.rb <spell.md>`。修复全部报告项，再检查语义一致性：所有符号均有定义、所有能量项均来自法力、所有普通物理量均使用 SI 单位。
 
-## Modeling rules
+## 建模规则
 
-- Divide performance into five phases: offline study, pre-cast calibration, runtime estimation, feedback correction, and post-cast review.
-- Give the caster a finite attention and calculation budget. Complexity must cost time, concentration, aids, or error.
-- Convert mathematics into cues and actions: what is sensed, how it is estimated, what gesture/breath/phrase encodes it, and what correction follows.
-- Use dimensions and named units consistently. Define every magical quantity operationally: explain how a practitioner measures it.
-- Treat **法力** as the sole energy source of every spell. Heat, impulse, constraint, motion, resonance, and other named effects are channels, states, or costs of transformed 法力; do not introduce a second energy source.
-- Use SI units for ordinary measurable quantities: meters, seconds, kelvin, kilograms, and derived SI units as applicable. Measure 法力 in the declared academy unit $\mathrm{ae}$; do not create separate fantasy units for distance, time, temperature, mass, or each spell school.
-- Write every mathematical symbol with `$...$` or `$$...$$`, never as code-formatted variables. Write units inside math mode as `\mathrm{m}`, `\mathrm{s}`, `\mathrm{K}`, and `\mathrm{ae}`; use `\,` between a number and its unit. Use LaTeX for subscripts, Greek letters, fractions, roots, vectors, and multi-line derivations.
-- Prefer a small composable model over one impressive equation. Identify state variables, control variables, disturbances, constraints, and success criteria.
-- Provide a fast field algorithm as well as the full derivation. State its validity range and characteristic failure.
-- Make expertise qualitative as well as quantitative. Experts select models, reject bad observations, manage uncertainty, and abort earlier; they do not merely calculate faster.
-- Preserve genuine uncertainty. Do not let an equation grant knowledge the caster has no way to observe.
-- Make safety procedures mechanically meaningful: safe direction, containment, degraded mode, abort cue, and residual-mana handling.
-- Keep real-world references conceptual and pedagogical. Do not reproduce weapon firing tables, operational targeting procedures, guidance-system construction, or methods for identifying or tracking real people. Keep this boundary in the authoring rules, not in reader-facing prose.
+- 将施法能力分为课前学习、施法前标定、临场估计、反馈修正和施法后复盘五个阶段。
+- 为施法者设定有限的注意力与计算预算。复杂度必须体现为时间、专注、辅助工具或误差代价。
+- 将数学转化为线索和动作：感知什么、如何估计、用什么手势/呼吸/短句编码、随后如何修正。
+- 始终保持量纲和单位一致。以操作性定义说明每个法术量如何被施法者测得。
+- **法力**是全部术式唯一的能量来源。热、冲量、约束、运动、共鸣等只能是法力转化后的通道、状态或成本，不得引入第二能源。
+- 普通可测量量使用 SI 单位。法力使用学院单位 $\mathrm{ae}$；不得为距离、时间、温度、质量或不同学派另造单位。
+- 数学符号一律写在 `$...$` 或 `$$...$$` 中，不使用代码格式。单位在数学环境中写作 `\mathrm{m}`、`\mathrm{s}`、`\mathrm{K}` 和 `\mathrm{ae}`，数值与单位之间使用 `\,`。下标、希腊字母、分式、根式、向量和多行推导均使用 LaTeX。
+- 优先使用小而可组合的模型。明确状态变量、控制变量、扰动、约束和成功条件。
+- 同时给出完整推导和快速临场算法，并说明后者的有效范围与典型失效方式。
+- 专业能力既是定量能力，也是定性判断。高手会选择模型、排除坏观测、管理不确定性并更早中止，而不只是算得更快。
+- 保留真实的不确定性。方程不得赋予施法者无法从任何渠道观测到的信息。
+- 安全流程必须在模型中有效，包括安全方向、约束、降级模式、中止信号和残余法力处理。
+- 现实资料只用于概念和教学参考。不得复刻武器射表、现实目标作业流程、制导系统制造方法或识别与追踪现实人物的方法。此限制只写在生成规则中，不进入法术教材正文。
 
-## Output contract
+## 输出约定
 
-For a complete practical spell, produce the sections required by `chapter-standard.md`. For an outline or discussion, use only the relevant sections, but always include:
+完整实用法术应包含 `chapter-standard.md` 要求的章节。讨论或提纲可以只使用有关部分，但必须说明：
 
-- the spell's control problem;
-- required observations and controllable quantities;
-- what is learned beforehand versus computed during casting;
-- the field approximation and its limitations;
-- feedback, failure, and abort behavior;
-- drills and an observable mastery standard.
+- 法术的主要控制问题；
+- 必要观测量与可控量；
+- 事前掌握的内容与临场计算的内容；
+- 临场近似及其限制；
+- 反馈、失效和中止行为；
+- 训练科目及可观察的掌握标准。
 
-Use notation only after introducing the physical or magical meaning. Explain the practitioner's mental procedure in plain language alongside equations. Write directly for apprentices and mages; the executable feeling must come from internal consistency, training progression, and measurable feedback. Do not call the world, its units, or its laws "fictional", "架空", or "虚构" in a spell chapter.
+先介绍物理或法术含义，再使用符号。公式旁必须配有施法者实际执行的心算或判断流程。正文直接写给学徒与法师；可操作感来自内部一致性、渐进训练和可测反馈。法术章节不得将世界、单位或定律称为“架空”“虚构”或“不对应现实”。

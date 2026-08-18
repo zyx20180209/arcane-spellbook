@@ -15,6 +15,7 @@
 | 火球术 | 受约束热核、法力分配、效果半径与投送 | [火球术](spells/fireball/fireball.md) |
 | 法师之手 | 持续接触场、摩擦、压力、力矩与反馈控制 | [法师之手](spells/mage-hand/mage-hand.md) |
 | 冰锥术 | 水料、相变移热、塑形、旋转稳定与弹道损耗 | [冰锥术](spells/ice-spike/ice-spike.md) |
+| 陨石术 | 既有天体改向、再入存续、牵引极限与术因脱离 | [陨石术](spells/meteor/meteor.md) |
 
 ## 学院计量约定
 
@@ -31,7 +32,8 @@ arcane-spellbook/
 ├── spells/                         # 现行法术教材
 │   ├── fireball/
 │   ├── ice-spike/
-│   └── mage-hand/
+│   ├── mage-hand/
+│   └── meteor/
 └── skills/arcane-spellbook/        # 编写规范、学科索引与校验工具
     ├── SKILL.md
     ├── agents/
@@ -47,7 +49,8 @@ arcane-spellbook/
 ruby skills/arcane-spellbook/scripts/validate_spell.rb \
   spells/fireball/fireball.md \
   spells/mage-hand/mage-hand.md \
-  spells/ice-spike/ice-spike.md
+  spells/ice-spike/ice-spike.md \
+  spells/meteor/meteor.md
 ```
 
 脚本使用标准 Ruby 环境，不需要第三方 gem。
